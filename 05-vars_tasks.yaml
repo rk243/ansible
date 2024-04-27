@@ -13,4 +13,4 @@
     
     - name: variable TASK-2
       ansible.builtin.debug:
-        "msg": "Hi, we are learning {{COURSE}} from {{TRAINER}}, Duration is {{Duration}}""
+        "msg": "Hi, we are learning {{COURSE}} from {{TRAINER}}, Duration is {{Duration}}"
