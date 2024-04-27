@@ -1,7 +1,7 @@
 - name: conditions
   hosts: web
   become: yes
-  task: 
+  tasks: 
     - name: checking user id exist or not
       ansible.builtin.command: id expense
       register: USER
