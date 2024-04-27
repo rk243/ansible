@@ -1,6 +1,6 @@
 - name: arguments
   hosts: localhost
   tasks:
-    - name: checking arguments
-      ansible.builtin.debug:
-        msg: "Hello {{PERSON}}, Best of {{WISHES}}"
+  - name: checking arguments
+    ansible.builtin.debug:
+      msg: "Hello {{PERSON}}, Best of {{WISHES}}"
