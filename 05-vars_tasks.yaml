@@ -7,6 +7,6 @@
   tasks:
     - name: variable TASK-1
       vars: 
-        COURSE: "TASK-1
+        COURSE: "TASK-1"
       ansible.builtin.debug:
         "msg": "Hi, we are learing {{COURSE}} from {{TRAINER}}, Duration is {{DURATION}}"
