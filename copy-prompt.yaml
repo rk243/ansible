@@ -3,4 +3,4 @@
   tasks:    
     - name: checking vars prompt
       ansible.builtin.debug:
-        msg: "Hi {{ROCK}} {JOCK}"
+        msg: "Hi {{ROCK}} {{JOCK}}"
