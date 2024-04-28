@@ -1,0 +1,12 @@
+- name: conditions
+  hosts: localhost
+  tasks:
+    - name: check user exists or not
+      ansible.builtin.command: id expense
+      register: USER
+      ignore_errors: true
+
+    - name: install user if not exists
+      ansible.builtin.command: useradd expense
+      when: USER.rc !=0 
+      
