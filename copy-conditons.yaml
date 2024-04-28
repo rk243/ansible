@@ -7,7 +7,11 @@
       register: USER
       ignore_errors: true
 
-    - name: install user if not exists
+    - name: create user
       ansible.builtin.command: useradd expense
       when: USER.rc !=0 
+
+    - name: print user details
+      ansible.builtin.debug:
+        msg: print user info: {{user}}
 
