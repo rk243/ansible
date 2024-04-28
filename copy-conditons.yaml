@@ -13,5 +13,5 @@
 
     - name: print user details
       ansible.builtin.debug:
-        msg: print user info: {{user}}
+        msg: "print user info: {{user}}""
 
