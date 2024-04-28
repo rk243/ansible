@@ -1,6 +1,6 @@
 - name: varsinventory
   hosts: localhost
   tasks:
-    - Name: vars inventory
+    - name: vars inventory
       ansible.builtin.debug:
         msg: "I'm learning {{COURSE}} from trainer {{TRAINER}}, DURATION {{DURATION}}"
