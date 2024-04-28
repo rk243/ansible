@@ -1,0 +1,6 @@
+- name : vars prompt
+  hosts: localhost
+  tasks:    
+    - name: checking vars prompt
+      ansible.builtin.debug:
+        msg: "Hi {{ROCK}} {JOCK}"
