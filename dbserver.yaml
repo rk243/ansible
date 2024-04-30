@@ -3,7 +3,7 @@
   vars:
     local_host: db.jeeta.online
   become: yes
-  vars_prompt: setup root password
+  vars_prompt: 
     - name: mysql_root_password
       prompt: please enter mysql root password
       private: no
