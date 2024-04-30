@@ -1,5 +1,5 @@
 - name: lowercase
-  hosts: loalhost
+  hosts: localhost
   vars:
     course: HELLO GURU
   tasks:
