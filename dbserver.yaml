@@ -2,6 +2,12 @@
   hosts: db
   vars:
     local_host: db.jeeta.online
+
+  vars_prompt: setup root password
+  - name: mysql_root_password
+    prompt: please enter mysql root password
+    private: no
+
   become: yes
   tasks:
     - name: install mysql server
@@ -35,6 +41,11 @@
     - name: print output of db connection
       ansible.builtin.debug:
         msg: "output: {{mysql_connection_output}}"
+
+    - name: setup root password
+      ansible.builtin.command: "mysql_secure_installation --set-root-pass {{mysql_root_password}}"
+      when: mysql_connection_output.failed is true
+
 
 
   
