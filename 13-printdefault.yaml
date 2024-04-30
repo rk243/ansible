@@ -5,5 +5,5 @@
   tasks: 
     - name: removeduplicates
       ansible.builtin.debug:
-        msg: {{numbers | unique}}
+        msg: "{{numbers | unique}}"
 
