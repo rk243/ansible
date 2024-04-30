@@ -3,13 +3,10 @@
   vars:
     local_host: db.jeeta.online
   become: yes
-
   vars_prompt: setup root password
-  - name: mysql_root_password
-    prompt: please enter mysql root password
-    private: no
-
-  
+    - name: mysql_root_password
+      prompt: please enter mysql root password
+      private: no
   tasks:
     - name: install mysql server
       ansible.builtin.dnf:
