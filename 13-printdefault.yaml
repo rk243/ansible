@@ -1,4 +1,4 @@
-- name: upper case
+- name: upper
   host: localhost
   vars:
     course: "hello guru"
