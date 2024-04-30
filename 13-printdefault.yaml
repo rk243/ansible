@@ -13,4 +13,4 @@
   tasks: 
   - name: uppercase
     ansible.builtin.debug:
-      msg: "print upper case of hello guru is {{course | uppercase}}"
+      msg: "print upper case of hello guru is {{course | upper}}"
