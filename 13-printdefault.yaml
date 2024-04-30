@@ -1,15 +1,15 @@
-- name: dict2items
+- name: items2dist
   hosts: localhost
   vars:
-    my_dict:
-      course: ansible
-      trainer: radhakrishna
-      duration: 120hrs
+    my_list:
+      - {'key': 'course', 'value': 'ansible'}
+      - {'key': 'trainer', 'value': 'Radhakrishna'}
+      - {'key': 'duration', 'value': '120hrs'}
   tasks:
-  - name: before conversion
+  - name: before convert
     ansible.builtin.debug:
-      msg: "before conversion: {{my_dict}}"
-  
-  - name: after conversion
-    ansible.builtin.debug:
-      msg: "after conversion: {{my_dict | dict2items}}"
+      msg: "before convert is: {{my_list}}"
+
+  - name: after convert
+    ansible.buitin.debug:
+      msg: "after convert is: {{my_list | items2dict}}"
