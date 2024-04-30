@@ -5,4 +5,4 @@
   tasks:
   - name: convert lowercase
     ansible.builtin.debug:
-      msg: {{course | lower}}
+      msg: "{{course | lower}}"
