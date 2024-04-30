@@ -1,9 +1,8 @@
-
-- name: upper case
-  hosts: localhost
+- name: lowercase
+  hosts: loalhost
   vars:
-    course: "hello guru"
-  tasks: 
-  - name: uppercase
+    course: HELLO GURU
+  tasks:
+  - name: convert lowercase
     ansible.builtin.debug:
-      msg: print upper case of hello guru is "{{course | upper}}"
+      msg: {{course | lower}}
