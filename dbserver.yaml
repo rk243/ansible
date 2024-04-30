@@ -1,5 +1,7 @@
 - name: mysql
-  hosts: localhost
+  hosts: db
+  vars:
+    local_host: db.jeeta.online
   become: yes
   tasks:
     - name: install mysql server
@@ -18,7 +20,7 @@
       community.mysql.mysql_info:
         login_user: root
         login_password: ExpenseApp@1
-        login_host: 54.84.230.161
+        login_host: "{{local_host}}"
         filter: version
         ignore_errors: yes
         register: mysql_connection_output
