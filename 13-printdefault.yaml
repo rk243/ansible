@@ -11,5 +11,5 @@
       msg: "before convert is: {{my_list}}"
 
   - name: after convert
-    ansible.buitin.debug:
+    ansible.builtin.debug:
       msg: "after convert is: {{my_list | items2dict}}"
