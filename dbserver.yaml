@@ -27,7 +27,7 @@
 
     - name: print output of db connection
       ansible.builtin.debug:
-        msg: "output: {{register}}"
+        msg: "output: {{mysql_connection_output}}"
 
 
   
