@@ -32,7 +32,7 @@
     - name: check db connection
       community.mysql.mysql_info:
         login_user: root
-        login_password: {{mysql_root_password}}
+        login_password: "{{mysql_root_password}}"
         login_host: "{{local_host}}"
         filter: version
       ignore_errors: yes
