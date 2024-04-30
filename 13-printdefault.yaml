@@ -1,10 +1,3 @@
-- name: print default
-  hosts: localhost
-  tasks:
-  - name: print default
-    ansible.builtin.debug:
-      msg: "Default print is : {{course | default('Ansible')}}"
----
 
 - name: upper case
   hosts: localhost
