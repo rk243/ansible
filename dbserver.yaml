@@ -22,8 +22,8 @@
         login_password: ExpenseApp@1
         login_host: "{{local_host}}"
         filter: version
-        ignore_errors: yes
-        register: mysql_connection_output
+      ignore_errors: yes
+      register: mysql_connection_output
 
     - name: print output of db connection
       ansible.builtin.debug:
