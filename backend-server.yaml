@@ -9,7 +9,7 @@
 
     - name: enable nodejs:20
       ansible.builtin.dnf:
-        name: node.js:20
+        name: nodejs:20
         enabled: yes
 
     - name: install nodejs
