@@ -1,6 +1,6 @@
 - name: install frontend server
-  hosts: backend
   become: yes
+  hosts: backend
   tasks: 
   - name: disable nodejs
     ansible.builtin.command: dnf module disable nodejs -y
