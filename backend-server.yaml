@@ -1,0 +1,18 @@
+- name: install frontend server
+  hosts: backend
+  become: yes
+  tasks: 
+    - name: disable nodejs
+      ansible.builtin.dnf:
+        name: nodejs
+        disabled: yes
+
+    - name: enable nodejs:20
+      ansible.builtin.dnf:
+        name: node.js:20
+        enabled: yes
+
+    - name: install nodejs
+      ansible.builtin.dnf:
+        name: nodejs
+        state: latest
